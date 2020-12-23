@@ -57,7 +57,10 @@ class cvdl_hw01_dl_window(QMainWindow):
         print("5.2")
 
     def __butt_cb_5_3_Resnet50_random_select_testing_image(self):
-        print("5.3")
+        print("=====================================================================")
+        print("-------------5.3 Resnet50 - random select testing image--------------")
+        resnet50.random_select_testdata()
+        print("=====================================================================")
 
     def __butt_cb_5_4_Resnet50_show_tensorboard_training(self):
         print("5.4")
