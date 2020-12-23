@@ -48,7 +48,10 @@ class cvdl_hw01_dl_window(QMainWindow):
         print("4.2")
 
     def __butt_cb_5_1_Resnet50_show_accuracy(self):
-        print("5.1")
+        print("=====================================================================")
+        print("--------------------5.1 Resnet50 - show accuracy---------------------")
+        resnet50.show_train_acc("Resnet50/srcfile/resnet50_train_history_log.csv")
+        print("=====================================================================")
 
     def __butt_cb_5_2_Resnet50_show_tensorboard_training(self):
         print("5.2")
