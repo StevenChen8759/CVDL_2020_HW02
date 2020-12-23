@@ -6,18 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>649</width>
+    <width>661</width>
     <height>338</height>
    </rect>
   </property>
   <property name="font">
    <font>
     <family>微軟正黑體</family>
-    <pointsize>12</pointsize>
+    <pointsize>11</pointsize>
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>CVDL_2020_HW02_By_Steven_HH_Chen</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
@@ -28,6 +28,12 @@
       <width>301</width>
       <height>71</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="title">
      <string>1. Background Subtraction</string>
@@ -40,6 +46,12 @@
        <width>281</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>10</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>1.1 Background Subtraction</string>
@@ -55,6 +67,12 @@
       <height>111</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="title">
      <string>2. Optical Flow</string>
     </property>
@@ -66,6 +84,12 @@
        <width>281</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>10</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>2.1 Preprocessing</string>
@@ -79,6 +103,12 @@
        <width>281</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>10</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>2.2 Video Tracking</string>
@@ -94,6 +124,12 @@
       <height>71</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="title">
      <string>3. Perspective Transform</string>
     </property>
@@ -105,6 +141,12 @@
        <width>281</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>10</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>3. Perspective Transform</string>
@@ -120,6 +162,12 @@
       <height>111</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="title">
      <string>4. PCA</string>
     </property>
@@ -131,6 +179,12 @@
        <width>281</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>10</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>4.1 Image Reconstruction</string>
@@ -144,6 +198,12 @@
        <width>281</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>10</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>4.2 Compute Reconstruction Error</string>
@@ -159,6 +219,12 @@
       <height>191</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="title">
      <string>5. ResNet50 - Dog/Cat Classification</string>
     </property>
@@ -170,6 +236,12 @@
        <width>281</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>10</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>5.1 Show Accuracy</string>
@@ -184,6 +256,12 @@
        <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
       <string>5.2 Show Tensorboard Training</string>
      </property>
@@ -196,6 +274,12 @@
        <width>281</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>9</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>5.3 Randomly Select Testing Image</string>
@@ -210,8 +294,14 @@
        <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>5.4 Random Earaing Accuracy</string>
+      <string>5.4 Random Erasing Accuracy</string>
      </property>
     </widget>
    </widget>
