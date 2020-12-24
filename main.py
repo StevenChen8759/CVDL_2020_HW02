@@ -8,6 +8,7 @@ from PyQt5.uic import loadUi
 # Tensorflow import
 
 # Project module imoprt
+from Perspective_Transform import PerspectiveTransform
 from Resnet50 import resnet50
 
 
