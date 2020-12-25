@@ -8,7 +8,9 @@ from PyQt5.uic import loadUi
 # Tensorflow import
 
 # Project module imoprt
-from Resnet50 import resnet50
+import PCA.pca
+import Resnet50.resnet50
+
 
 
 class cvdl_hw01_dl_window(QMainWindow):
