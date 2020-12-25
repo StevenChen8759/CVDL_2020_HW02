@@ -7,7 +7,7 @@ from PyQt5.uic import loadUi
 
 # Tensorflow import
 
-# Project module imoprt
+from Background_Subtraction import bgsub
 from Resnet50 import resnet50
 
 
@@ -30,7 +30,7 @@ class cvdl_hw01_dl_window(QMainWindow):
         self.pushButton_10.clicked.connect(self.__butt_cb_5_4_Resnet50_show_tensorboard_training)
 
     def __butt_cb_1_1_bg_subtraction(self):
-        print("1.1")
+        bgsub.bgsub()
 
     def __butt_cb_2_1_optical_flow_preprocessing(self):
         print("2.1")
