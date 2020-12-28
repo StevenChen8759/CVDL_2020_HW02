@@ -34,13 +34,20 @@ class cvdl_hw02_window(QMainWindow):
         self.pushButton_10.clicked.connect(self.__butt_cb_5_4_Resnet50_show_tensorboard_training)
 
     def __butt_cb_1_1_bg_subtraction(self):
+        print("=====================================================================")
+        print("---------------------1.1 Background Subtraction----------------------")
         bgsub.bgsub()
 
     def __butt_cb_2_1_optical_flow_preprocessing(self):
-        print("2.1")
+        print("=====================================================================")
+        print("------------------2.1 Optical Flow - Preprocessing-------------------")
+        self.kpts = opticalFlow.preprocessing()
+        self.pushButton_3.setEnabled(True)
 
     def __butt_cb_2_2_optical_flow_video_tracking(self):
-        print("2.2")
+        print("=====================================================================")
+        print("-----------------2.2 Optical Flow - Video Tracking-------------------")
+        opticalFlow.videoTracking(self.kpts)
 
     def __butt_cb_3_1_perspective_transform(self):
         print("3.1")
@@ -55,7 +62,6 @@ class cvdl_hw02_window(QMainWindow):
         print("=====================================================================")
         print("--------------------5.1 Resnet50 - show accuracy---------------------")
         resnet50.show_train_acc("Resnet50/srcfile/resnet50_train_history_log.csv")
-        print("=====================================================================")
 
     def __butt_cb_5_2_Resnet50_show_tensorboard_training(self):
         print("5.2")
@@ -64,7 +70,6 @@ class cvdl_hw02_window(QMainWindow):
         print("=====================================================================")
         print("-------------5.3 Resnet50 - random select testing image--------------")
         resnet50.random_select_testdata()
-        print("=====================================================================")
 
     def __butt_cb_5_4_Resnet50_show_tensorboard_training(self):
         print("5.4")
