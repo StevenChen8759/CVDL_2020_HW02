@@ -12,7 +12,7 @@ def bgsub():
     while cnt != 50:
         ret, frame = videoReader.read()
         if ret:
-            frame_gray = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
+            frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             frameCollection.append(frame_gray)
             cnt = cnt + 1
 
@@ -20,7 +20,26 @@ def bgsub():
 
     # Generate Gaussian Model based on the image read upward
     print("Generate Gaussian Model", end='...')
-    # TODO: Build Gaussian Model
+
+    # Read frame as numpy array
+    frame_np_input = np.array([x for x in frameCollection])
+
+    # Fetch width and height information, then create mean and std matrix
+    pixel_set = np.moveaxis(frame_np_input, 0, -1)
+    height, width, n = pixel_set.shape
+    mat_mean = np.zeros((height, width))
+    mat_std = np.zeros((height, width))
+
+    # Traverse each pixels, then calculate mean and std for each pixel
+    for i in range(height):
+        for j in range(width):
+            pixels = pixel_set[i][j]
+            mean = np.mean(pixels)
+            std = np.std(pixels)
+            std = std if std > 5 else 5
+            mat_mean[i][j] = mean
+            mat_std[i][j] = std
+
     print("Done")
 
 
@@ -29,9 +48,13 @@ def bgsub():
     while True:
             ret, frame = videoReader.read()
             if ret == True:
-                # TODO: Put Gaussian processed frame into 2nd input
-                newframe = np.concatenate((frame,frame), axis=1)
-                cv2.imshow("Background Subtraction", newframe)
+                # Filter by Gaussian Filter, then output as grayscale
+                frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+                frame_gaussian = frame_gray - mat_mean
+                frame_gaussian = (frame_gaussian > 5 * mat_std).astype(np.uint8) * 255
+
+                frame_show = cv2.hconcat([frame, np.stack((frame_gaussian,) * 3, axis=-1)])
+                cv2.imshow("Background Subtraction", frame_show)
 
                 if cv2.waitKey(25) & 0xFF == ord('q'):
                     break
@@ -41,15 +64,6 @@ def bgsub():
 
     videoReader.release()
     cv2.destroyAllWindows()
-    '''while(True):
-    # Capture frame-by-frame
-    ret, frame = cap.read()
-
-    # Our operations on the frame come here
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-    # Display the resulting frame
-    cv2.imshow('frame',gray)'''
 
 
 if __name__ == "__main__":
