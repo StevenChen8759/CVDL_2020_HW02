@@ -8,17 +8,17 @@ from PyQt5.uic import loadUi
 # Tensorflow import
 
 # Project module imoprt
-from Optical_Flow import opticalFlow
 from Background_Subtraction import bgsub
+from Optical_Flow import opticalFlow
 from Perspective_Transform import PerspectiveTransform
+from PCA import pca
 from Resnet50 import resnet50
-from PCA import PCA
 
 
-class cvdl_hw01_dl_window(QMainWindow):
+class cvdl_hw02_window(QMainWindow):
 
     def __init__(self):
-        super(cvdl_hw01_dl_window, self).__init__()
+        super(cvdl_hw02_window, self).__init__()
         loadUi('cvdl_2020_hw02.ui', self)
 
         # Add callback to each button
@@ -71,6 +71,6 @@ class cvdl_hw01_dl_window(QMainWindow):
 
 if __name__=='__main__':
     app = QApplication(sys.argv)
-    w = cvdl_hw01_dl_window()
+    w = cvdl_hw02_window()
     w.show()
     sys.exit(app.exec())
