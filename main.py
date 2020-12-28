@@ -10,8 +10,9 @@ from PyQt5.uic import loadUi
 # Project module imoprt
 from Optical_Flow import opticalFlow
 from Background_Subtraction import bgsub
+from Perspective_Transform import PerspectiveTransform
 from Resnet50 import resnet50
-import PCA.pca
+from PCA import PCA
 
 
 class cvdl_hw01_dl_window(QMainWindow):
