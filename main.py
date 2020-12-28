@@ -53,10 +53,15 @@ class cvdl_hw02_window(QMainWindow):
         print("3.1")
 
     def __butt_cb_4_1_PCA_image_reconstruction(self):
-        print("4.1")
+        print("=====================================================================")
+        print("-------------------4.1 PCA - Image Reconstruction--------------------")
+        self.reconstruction_error = pca.ImageReconstruction()
+        self.pushButton_6.setEnabled(True)
 
     def __butt_cb_4_2_PCA_reconstruction_error_compute(self):
-        print("4.2")
+        print("=====================================================================")
+        print("-----------------4.2 PCA - Show Reconstruction Error-----------------")
+        print(self.reconstruction_error)
 
     def __butt_cb_5_1_Resnet50_show_accuracy(self):
         print("=====================================================================")
