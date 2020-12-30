@@ -13,6 +13,7 @@ numpy = "*"
 matplotlib = "*"
 sklearn = "*"
 opencv-python = "==3.4.2.17"
+opencv-contrib-python = "*"
 
 [requires]
 python_version = "3.7"

@@ -50,7 +50,9 @@ class cvdl_hw02_window(QMainWindow):
         opticalFlow.videoTracking(self.kpts)
 
     def __butt_cb_3_1_perspective_transform(self):
-        print("3.1")
+        print("=====================================================================")
+        print("---------3.1 Perspective Transform - Perspective Transform-----------")
+        PerspectiveTransform.transform()
 
     def __butt_cb_4_1_PCA_image_reconstruction(self):
         print("=====================================================================")
