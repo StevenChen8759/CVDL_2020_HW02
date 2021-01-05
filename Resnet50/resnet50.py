@@ -20,7 +20,11 @@ def show_train_acc(history_file_path):
                     row["val_loss"][0:4]))
 
 def show_tensorboard_training():
-    pass
+    tb_acc_loss = plt.imread("./Resnet50/srcfile/tensorboard_acc.jpg")
+
+    plt.title("Tensorboard Training Process")
+    plt.imshow(tb_acc_loss)
+    plt.show()
 
 def random_select_testdata():
     idx_all = random.randint(0, 24999)

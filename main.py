@@ -71,7 +71,8 @@ class cvdl_hw02_window(QMainWindow):
         resnet50.show_train_acc("Resnet50/srcfile/resnet50_train_history_log.csv")
 
     def __butt_cb_5_2_Resnet50_show_tensorboard_training(self):
-        print("5.2")
+        resnet50.show_tensorboard_training()
+
 
     def __butt_cb_5_3_Resnet50_random_select_testing_image(self):
         print("=====================================================================")
